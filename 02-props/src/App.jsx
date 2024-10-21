@@ -3,10 +3,21 @@ import './App.css'
 import Todo from './Todo'
 // './Todo.jsx' or './Todo' which is best practice?
 // no need to use extension here. extension use korleo kono problem nai. but na use kora recommended
+import Actor from './Actor'
+import Singer from './Singer'
 
 
 function App() {
   
+  const actorsss = ['Robert Downey Jr.', 'Chris Evans', 'Mark Ruffalo',]
+
+  const singers = [
+    { id: 1, name: 'Ana Maria', age: 34 },
+    { id: 2, name: 'Tailor Swift', age: 33 },
+    { id: 3, name: 'Otilia', age: 32 },
+  ]
+
+
 
   return (
     <>
@@ -53,9 +64,34 @@ function App() {
       <Todo task="Learn Next.js" isDone={false}></Todo>
 
 
+
+      <br/>
+      <br/>
+      <hr/>
+      <h4>-----------------Actor.jsx----------------</h4>
+      <Actor name="abc"></Actor>
+      {
+        actorsss.map(actorrr => <Actor name={actorrr}></Actor>)
+      }
+
+
+
+      <br/>
+      <br/>
+      <hr/>
+      <h4>-----------------Singer.jsx----------------</h4>
+      {/* <Singer name="xyz"></Singer> */}
+      {
+        singers.map(singer => <Singer singer={singer}></Singer>)
+      }
+
+
     </>
   )
 }
+
+
+
 
 
 //props is short form of properties
