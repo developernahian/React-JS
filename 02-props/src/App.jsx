@@ -5,6 +5,8 @@ import Todo from './Todo'
 // no need to use extension here. extension use korleo kono problem nai. but na use kora recommended
 import Actor from './Actor'
 import Singer from './Singer'
+import BookStore from './BookStore'
+
 
 
 function App() {
@@ -16,6 +18,15 @@ function App() {
     { id: 2, name: 'Tailor Swift', age: 33 },
     { id: 3, name: 'Otilia', age: 32 },
   ]
+
+
+  const books = [
+    { id: 1, name: 'physics', price: 300 },
+    { id: 2, name: 'Math', price: 500 },
+    { id: 3, name: 'Chemistry', price: 230  },
+    { id: 4, name: 'biology', price: 200 },
+  ]
+
 
 
 
@@ -84,6 +95,17 @@ function App() {
       {
         singers.map(singer => <Singer singer={singer}></Singer>)
       }
+
+
+
+
+      <br/>
+      <br/>
+      <hr/>
+      <h4>-----------------BookStore.jsx + Book.jsx----------------</h4>
+      <BookStore books={books}></BookStore>
+      {/* //props and props value */}
+      
 
 
     </>
