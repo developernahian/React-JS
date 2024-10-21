@@ -1,5 +1,8 @@
 
 import './App.css'
+import Todo from './Todo'
+// './Todo.jsx' or './Todo' which is best practice?
+// no need to use extension here. extension use korleo kono problem nai. but na use kora recommended
 
 
 function App() {
@@ -14,12 +17,20 @@ function App() {
       <Device name="mobile" price="1000"></Device>
 
 
+      <br/>
+      <br/>
+      <hr/>
+      <h4>-----------------Student----------------</h4>
 
 
       <Student grade="7" score="95"></Student>
       <Student grade="9" score="80"></Student>
 
       
+      <br/>
+      <br/>
+      <hr/>
+      <h4>-----------------Grammer----------------</h4>
 
       
       <Gammer name="John" rank="105"></Gammer>
@@ -28,6 +39,18 @@ function App() {
       {/* value na dite chaile default value use kra jai */}
       <Gammer></Gammer>
       <Gammer rank='60'></Gammer>
+
+
+
+      <br/>
+      <br/>
+      <hr/>
+      <h4>-----------------Todo.jsx----------------</h4>
+      
+      <Todo task="Learn React" isDone={true}></Todo>
+      <Todo task="Learn Node" isDone={false}></Todo>
+      <Todo task="Learn JSX" isDone={true}></Todo>
+      <Todo task="Learn Next.js" isDone={false}></Todo>
 
 
     </>
@@ -67,6 +90,10 @@ function Gammer({name='UUunknown', rank='0'}){
   )
 
 }
+
+
+
+
 
 export default App
 
