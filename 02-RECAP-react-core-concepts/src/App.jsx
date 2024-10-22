@@ -14,7 +14,7 @@ function App() {
         <li>Props</li>
         <li>Event handler</li>
         <li>State</li>
-        <li>Load data</li>
+        <li>useEffect</li>
       </ol>
       <hr/>
 
