@@ -1,15 +1,19 @@
 import { useEffect, useState } from 'react'
 import './App.css'
-import Sunglass from './components/Sunglass/Sunglass'
 import Watch from './components/Watch/Watch'
 
+
+//COMMENT: Local Fake Data, Chatgpt Json, Online Api(github) 3 ta way ekhane dekhiyechi..
+//COMMENT: 1st er ta public folder er watches.json file
+//COMMENT: 2nd ta github e json file upload kore
+//COMMENT: 3red ta array like object formate
 
 function App() {
 
   //watches er state declear
   const [watches, setWatches] = useState([])
 
-
+  //COMMENT: 1st er ta public folder er watches.json file
   // useEffect( () =>{}, [])
   //watches.json file ta public folder er moddhe ache. eta public folder e rakhte hoy
   // useEffect( () =>{
@@ -21,7 +25,7 @@ function App() {
 //NOTE: code korar somoy json data te kono chenge korle website auto update hoyna. dont worry page reload dilei update show korbe
 
 
-
+//COMMENT: 2nd ta github e json file upload kore
 //github e public repo to json upload kore then raw data link create api
 useEffect( () =>{
   fetch('https://raw.githubusercontent.com/developernahian/5watches-data/refs/heads/main/watches.json')
@@ -35,7 +39,7 @@ useEffect( () =>{
 
 
 
-
+//COMMENT: 3rd ta array like object formate
   //(ChatGPT Prompt) Give me 5 smart watch array of object format data and I need just the id, name and price
   // const watches = [
   //   {
@@ -69,8 +73,6 @@ useEffect( () =>{
   return (
     <>
       
-      <Sunglass> </Sunglass>
-      <hr/>
       
       {
         watches.map(watch => <Watch key={watch.id} watch={watch}></Watch>)
@@ -81,3 +83,7 @@ useEffect( () =>{
 }
 
 export default App
+
+
+
+//B10M41-3
