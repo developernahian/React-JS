@@ -33,6 +33,8 @@ export default [
         'warn',
         { allowConstantExport: true },
       ],
+      // react prop-types off  https://github.com/jsx-eslint/eslint-plugin-react/blob/master/docs/rules/prop-types.md
+      "react/prop-types": 'off'
     },
   },
 ]
