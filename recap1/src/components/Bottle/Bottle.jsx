@@ -19,4 +19,5 @@ Bottle.propTypes = {
     handleAddToCart: PropTypes.func.isRequired
 }
 
+
 export default Bottle;
